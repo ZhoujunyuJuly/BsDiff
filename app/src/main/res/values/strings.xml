@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BsDiff</string>
+    <string name="description">差分说明：\n
+        1.请手动将新、旧apk，放在 /sdcard/BsDiff 目录下，填写包名\n
+        2.如不填写，使用默认文件：139_old_44MB.apk 等 \n
+        3.合成的文件统一自动命名：merge_(填写的旧包名).apk,如: merge_139_old_44MB.apk \n
+        3.差分时间在1-2分钟，请耐心等待
+    </string>
+    <string name="output_path_hint">差分包输出路径</string>
+    <string name="output_size_hint">差分包大小</string>
+    <string name="origin_md5_hint">原包MD5值</string>
+    <string name="new_md5_hint">新包MD5值</string>
+    <string name="check_success">校验成功</string>
+    <string name="check_fail">校验失败</string>
+</resources>

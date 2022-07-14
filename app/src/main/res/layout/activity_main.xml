@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_relativelayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".VIew.MainActivity">
+
+<!--    &lt;!&ndash;填写路径&ndash;&gt;-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/des"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="@string/description"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/old_path"-->
+<!--        android:layout_below="@id/des"-->
+<!--        android:layout_width="180dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:gravity="center"-->
+<!--        android:hint="旧包名，可不填"-->
+<!--        android:textSize="14sp" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/new_path"-->
+<!--        android:layout_below="@id/old_path"-->
+<!--        android:layout_width="180dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:hint="新包名，可不填"-->
+<!--        android:textSize="14sp" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/middle_path"-->
+<!--        android:layout_below="@id/new_path"-->
+<!--        android:layout_width="180dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:hint="差分包命名，可不填"-->
+<!--        android:textSize="14sp" />-->
+
+
+<!--    &lt;!&ndash;差分操作&ndash;&gt;-->
+
+<!--    <Button-->
+<!--        android:id="@+id/diff_btn"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_toRightOf="@id/middle_path"-->
+<!--        android:layout_alignTop="@id/middle_path"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="-10dp"-->
+<!--        android:text="开始差分" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/diff_tv"-->
+<!--        android:layout_width="500dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        tools:text="正在开始差分,啊老师减肥；啊了啊了；附件辣椒粉了；啊老师减肥哒；立法法老师大舅啊；lskd"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="14sp"-->
+<!--        android:layout_below="@id/middle_path" />-->
+
+<!--    &lt;!&ndash;合并操作&ndash;&gt;-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/patch_finish_path"-->
+<!--        android:layout_width="180dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/diff_tv"-->
+<!--        android:textSize="14sp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:hint="差分包输出路径"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/patch_finish_size"-->
+<!--        android:layout_width="180dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/patch_finish_path"-->
+<!--        android:textSize="14sp"-->
+<!--        android:gravity="center"-->
+<!--        android:hint="差分包大小"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/merge_btn"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_toRightOf="@id/patch_finish_size"-->
+<!--        android:layout_alignTop="@id/patch_finish_size"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="-10dp"-->
+<!--        android:text="合并" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/merge_tv"-->
+<!--        android:layout_width="500dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        tools:text="合并完成啊啥的浪费空间啊；老师看风景啊了放；阿莱克斯发动机；啊老师放假；拉丝粉；啦空间上的饭；可"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="14sp"-->
+<!--        android:layout_below="@id/merge_btn" />-->
+
+<!--    &lt;!&ndash;MD5值比较&ndash;&gt;-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/md5_origin"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/merge_tv"-->
+<!--        android:textSize="14sp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:hint="原包MD5值"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/md5_new"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/md5_origin"-->
+<!--        android:textSize="14sp"-->
+<!--        android:gravity="center"-->
+<!--        android:hint="新包MD5值"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/md5_btn"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_below="@id/md5_new"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="合并" />-->
+
+</RelativeLayout>
