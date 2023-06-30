@@ -12,4 +12,25 @@
     <string name="new_md5_hint">新包MD5值</string>
     <string name="check_success">校验成功</string>
     <string name="check_fail">校验失败</string>
+
+
+    <!--增量更新页面-->
+    <string name="note_update_url_address">地址:%1$s</string>
+    <string name="note_update_url_md5">MD5:%1$s</string>
+    <string name="note_update_url_version">版本:%1$s</string>
+    <string name="note_update_url_content">内容:%1$s</string>
+    <string name="note_update_url_size">大小:%1$s</string>
+
+    <string name="note_update_download_path">路径:%1$s</string>
+    <string name="note_update_download_progress">下载进度:%1$s%%，文件大小:%2$.2fMB</string>
+
+    <string name="note_update_diff_path">差分包路径:%1$s</string>
+    <string name="note_update_diff_size">差分共耗时:%1$s,差分包大小:%2$.2fMB</string>
+    <string name="note_update_diff_exist">已存在差分包,该包大小:%1$.2fMB</string>
+    <string name="note_update_patch_path">合并包路径:%1$s</string>
+    <string name="note_update_patch_size">合并共耗时:%1$s,合并包大小:%2$.2fMB</string>
+    <string name="note_update_patch_exist">已存在合并包,该包大小:%1$.2fMB</string>
+    <string name="note_update_md5_old">合并包:%1$s</string>
+    <string name="note_update_md5_new">目标包:%1$s</string>
+    <string name="note_update_install">校验成功，可以开始安装</string>
 </resources>

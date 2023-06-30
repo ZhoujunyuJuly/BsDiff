@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newPage.MCloudDiffActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="15dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/update_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/open_member_tips"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="增量更新测试页面"
+                app:titleTextColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_check_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="1.检查更新"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/update_toolbar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/result_update_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/btn_check_update"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/update_toolbar">
+
+                <TextView
+                    android:id="@+id/tv_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="地址：https://pesupport.mail.10086.cn/android/PE-V10.0.6-20230614_3e5a07a769_20230614160552_sec_20230614163334___20000_zipaligned_signed.apk" />
+
+                <TextView
+                    android:id="@+id/tv_md5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_url"
+                    tools:text="MD5:e4166f0e1ea2e6e617dbe7cef0ca525e" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_md5"
+                    tools:text="版本：10.0.6" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_version"
+                    tools:text="1. 全新云朵中心，做任务赚云朵兑好礼；\n2. 月月开红包，赢支付补贴；\n3. 修复一些已知问题。" />
+
+                <TextView
+                    android:id="@+id/tv_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tv_content"
+                    tools:text="170MB" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/btn_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:enabled="false"
+                android:text="2.下载新包"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/result_update_layout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/download_info_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_download"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/result_update_layout"
+                app:layout_constraintRight_toRightOf="@id/result_update_layout"
+                app:layout_constraintTop_toBottomOf="@+id/result_update_layout"
+                app:layout_constraintTop_toTopOf="@id/btn_download">
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="路径：/storage/emulated/0/Android/data/com.chinamobile.caiyun.note.demo/files/MCloudUpdate/PE_V10.0.6.apk" />
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_location"
+                    tools:text="下载进度：20%" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_diff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:enabled="false"
+                android:text="3.差分"
+                app:layout_constraintBottom_toBottomOf="@id/diff_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/diff_layout" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/diff_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/download_info_layout"
+                app:layout_constraintRight_toRightOf="@id/download_info_layout"
+                app:layout_constraintTop_toBottomOf="@id/download_info_layout">
+
+                <TextView
+                    android:id="@+id/tv_diff_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="正在差分，差分包路径：/sdcard//storage/emulated/0/Android/data/com.chinamobile.caiyun.note.demo/files/MCloudUpdate/PE_V10.0.6.apk" />
+
+                <TextView
+                    android:id="@+id/tv_diff_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_diff_info"
+                    tools:text="差分进度：20%，差分已耗时50s;差分包大小17.5MB" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/btn_patch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:enabled="false"
+                android:text="4.合并"
+                app:layout_constraintBottom_toBottomOf="@id/patch_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/patch_layout" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/patch_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/diff_layout"
+                app:layout_constraintRight_toRightOf="@id/diff_layout"
+                app:layout_constraintTop_toBottomOf="@id/diff_layout">
+
+                <TextView
+                    android:id="@+id/tv_patch_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="正在合并，新包路径：/sdcard/" />
+
+                <TextView
+                    android:id="@+id/tv_patch_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_patch_info"
+                    tools:text="合分进度：20%，合分已耗时50s" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/btn_md5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:enabled="false"
+                android:text="5.MD5校验"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patch_layout" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/md5_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/btn_md5"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/patch_layout"
+                app:layout_constraintRight_toRightOf="@id/patch_layout"
+                app:layout_constraintTop_toTopOf="@id/btn_md5">
+
+                <TextView
+                    android:id="@+id/tv_md5_old"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="旧包:e4166f0e1ea2e6e617dbe7cef0ca525e" />
+
+                <TextView
+                    android:id="@+id/tv_md5_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_md5_old"
+                    tools:text="新包:e4166f0e1ea2e6e617dbe7cef0ca525e" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/btn_install"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:enabled="false"
+                android:text="6.开始安装"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/md5_layout" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/install_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/btn_install"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/md5_layout"
+                app:layout_constraintRight_toRightOf="@id/md5_layout"
+                app:layout_constraintTop_toTopOf="@id/btn_install">
+
+                <TextView
+                    android:id="@+id/tv_install"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="校验成功，可以开始安装" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

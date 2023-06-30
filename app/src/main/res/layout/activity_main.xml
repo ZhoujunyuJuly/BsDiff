@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context=".VIew.MainActivity">
+    tools:context=".oldPage.VIew.BsDiffActivity">
 
 <!--    &lt;!&ndash;填写路径&ndash;&gt;-->
 

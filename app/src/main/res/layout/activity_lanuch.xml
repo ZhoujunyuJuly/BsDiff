@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context=".LanuchActivity">
+
+    <TextView
+        android:id="@+id/tv_old"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="旧页面：写于2022年7月。\n包含对给定路径下的apk进行差分与合并"/>
+
+    <Button
+        android:id="@+id/btn_old"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_old"
+        app:layout_constraintBottom_toBottomOf="@id/tv_old"
+        app:layout_constraintLeft_toRightOf="@id/tv_old"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="旧页面"/>
+
+
+    <TextView
+        android:id="@+id/tv_new"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_old"
+        android:text="新页面：写于2023年6月。\n1.基于邮箱渠道，请求下载最新版本全量包，在端侧进行差分、合并，MD5校验，安装。
+        \n2.点击按钮，可重置从此开始的所有步骤
+        \n3.点击标题栏，可切换业务/测试路径，测试路径对固定位置包进行差分。"/>
+
+    <Button
+        android:id="@+id/btn_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_old"
+        app:layout_constraintLeft_toLeftOf="@id/btn_old"
+        app:layout_constraintRight_toRightOf="@id/btn_old"
+        app:layout_constraintTop_toTopOf="@id/tv_new"
+        app:layout_constraintBottom_toBottomOf="@id/tv_new"
+        android:text="新页面"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

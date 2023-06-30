@@ -5,7 +5,7 @@ plugins {
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
-    ndkVersion "17.2.4988734"
+    ndkVersion '21.4.7075529'
 
     defaultConfig {
         applicationId "com.example.bsdiff"
@@ -62,7 +62,18 @@ dependencies {
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation project(path: ':updateApk')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+
 }
